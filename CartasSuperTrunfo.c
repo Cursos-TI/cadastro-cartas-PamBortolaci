@@ -37,13 +37,13 @@ int main() {
     printf ("Cadastre sua carta:\n");
 
     printf ("\nDigite o nome do estado: ");
-    scanf ("%s", &estado1);
+    scanf ("%s", estado1);
 
     printf ("\nDigite o código da carta: " );
-    scanf ("%s", &codigodacarta1);
+    scanf ("%s", codigodacarta1);
 
     printf ("\nDigite o nome da cidade: ");
-    scanf ("%s", &nomedacidade1);
+    scanf ("%s", nomedacidade1);
 
     printf ("\nDigite a população da cidade: ");
     scanf ("%d", &populacao1);
@@ -83,20 +83,20 @@ int main() {
 
     superpoder1 = populacao1 + areaemkm1 + pib1 + pibpercapta1 + (1 / densidadepopulacional1);
 
-    prinft ("\nSuper Poder..........: %.2f", superpoder1);
+    printf ("\nSuper Poder..........: %.2f\n", superpoder1);
 
     // Área para entrada de dados da segunda carta
   
     printf ("\nCadastre sua carta:\n");
 
     printf ("\nDigite o nome do estado: ");
-    scanf ("%s", &estado2);
+    scanf ("%s", estado2);
 
     printf ("\nDigite o código da carta: " );
-    scanf ("%s", &codigodacarta2);
+    scanf ("%s", codigodacarta2);
 
     printf ("\nDigite o nome da cidade: ");
-    scanf ("%s", &nomedacidade2);
+    scanf ("%s", nomedacidade2);
 
     printf ("\nDigite a população da cidade: ");
     scanf ("%d", &populacao2);
@@ -135,7 +135,7 @@ int main() {
 
     superpoder2 = populacao2 + areaemkm2 + pib2 + pibpercapta2 + (1 / densidadepopulacional2);
 
-    prinft ("\nSuper Poder..........: %.2f", superpoder2);
+    printf ("\nSuper Poder..........: %.2f", superpoder2);
     printf ("\n----------------------------------\n");
 
     printf ("Vencedor da População: %d\n", populacao1 > populacao2);
@@ -145,6 +145,7 @@ int main() {
     printf ("Vencedor em PIB per capta: %d\n", pibpercapta1 > pibpercapta2);
     printf ("Vencedor em Densidade Populacional: %d\n", densidadepopulacional1 > densidadepopulacional2);
     printf ("Vencedor de Super Poder: %d\n", superpoder1 > superpoder2);
+    printf ("----------------------------------\n");
 
 
 return 0;
