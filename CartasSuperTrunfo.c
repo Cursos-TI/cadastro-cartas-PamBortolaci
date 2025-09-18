@@ -17,8 +17,7 @@ int main() {
     int pontosturisticos1 = 18;
     float densidadepopulacional1 = 0.0;
     float pibpercapta1 = 0.0;
-    float densidadepopulacional1 = 0.0;
-    float pibpercapta1 = 0.0;
+    float superpoder1 = 0.0;
   
   // Variáveis da segunda carta
 
@@ -31,8 +30,7 @@ int main() {
     int pontosturisticos2 = 18;
     float densidadepopulacional2 = 0.0;
     float pibpercapta2 = 0.0;
-    float densidadepopulacional2 = 0.0;
-    float pibpercapta2 = 0.0;
+    float superpoder2 = 0.0;
 
   // Área para entrada de dados da primeira carta
   
@@ -59,6 +57,7 @@ int main() {
     printf ("\nDigite o número de Pontos turísticos: ");
     scanf ("%d", &pontosturisticos1);
 
+
   // Área de montagem da primeira carta
 
     printf ("\n* %s -- %s -- %s", codigodacarta1, nomedacidade1, estado1);
@@ -79,6 +78,12 @@ int main() {
 
     printf ("\n A densidade populacional de %s é de: %.2f", nomedacidade1, densidadepopulacional1);
     printf ("\n O PIB per capta de %s é de: %.2f\n", nomedacidade1, pibpercapta1);
+
+    //Cálculo de Super Poder Carta 1
+
+    superpoder1 = populacao1 + areaemkm1 + pib1 + pibpercapta1 + (1 / densidadepopulacional1);
+
+    prinft ("\nSuper Poder..........: %.2f", superpoder1);
 
     // Área para entrada de dados da segunda carta
   
@@ -125,6 +130,22 @@ int main() {
 
     printf ("\n A densidade populacional de %s é de: %.2f", nomedacidade2, densidadepopulacional2);
     printf ("\n O PIB per capta de %s é de: %.2f", nomedacidade2, pibpercapta2);
+
+    //Cálculo de Super Poder Carta 2
+
+    superpoder2 = populacao2 + areaemkm2 + pib2 + pibpercapta2 + (1 / densidadepopulacional2);
+
+    prinft ("\nSuper Poder..........: %.2f", superpoder2);
+    printf ("\n----------------------------------\n");
+
+    printf ("Vencedor da População: %d\n", populacao1 > populacao2);
+    printf ("Vencedor da área em Km²: %d\n", areaemkm1 > areaemkm2);
+    printf ("Vencedor do PIB: %d\n", pib1 > pib2);
+    printf ("Vencedor em Pontos turísticos: %d\n", pontosturisticos1 > pontosturisticos2);
+    printf ("Vencedor em PIB per capta: %d\n", pibpercapta1 > pibpercapta2);
+    printf ("Vencedor em Densidade Populacional: %d\n", densidadepopulacional1 > densidadepopulacional2);
+    printf ("Vencedor de Super Poder: %d\n", superpoder1 > superpoder2);
+
 
 return 0;
 } 
