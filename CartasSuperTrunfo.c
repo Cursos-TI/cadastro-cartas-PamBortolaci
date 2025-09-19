@@ -18,6 +18,7 @@ int main() {
     float densidadepopulacional1 = 0.0;
     float pibpercapta1 = 0.0;
     float superpoder1 = 0.0;
+    int escolha;
   
   // Variáveis da segunda carta
 
@@ -138,15 +139,70 @@ int main() {
     printf ("\nSuper Poder..........: %.2f", superpoder2);
     printf ("\n----------------------------------\n");
 
-    printf ("Vencedor da População: %d\n", populacao1 > populacao2);
-    printf ("Vencedor da área em Km²: %d\n", areaemkm1 > areaemkm2);
-    printf ("Vencedor do PIB: %d\n", pib1 > pib2);
-    printf ("Vencedor em Pontos turísticos: %d\n", pontosturisticos1 > pontosturisticos2);
-    printf ("Vencedor em PIB per capta: %d\n", pibpercapta1 > pibpercapta2);
-    printf ("Vencedor em Densidade Populacional: %d\n", densidadepopulacional1 > densidadepopulacional2);
-    printf ("Vencedor de Super Poder: %d\n", superpoder1 > superpoder2);
-    printf ("----------------------------------\n");
+    printf ("Escolha o atributo que você deseja comparar (de 1 a 7): \n");
+    printf ("1 = População\n");
+    printf ("2 = Área em Km²\n");
+    printf ("3 = PIB\n");
+    printf ("4 = Pontos Turísticos\n");
+    printf ("5 = Densidade Populacional\n");
+    printf ("6 = PIB percapta\n");
+    printf ("7 = Super Poder\n");
+    scanf ("%d", &escolha);
 
+    //área para comparar as cartas usando uma sequência de if de acordo com a escolha do Usuário na variável escolha
+    
+    if (escolha == 1) {
+        if (populacao1 > populacao2) 
+        printf ("%s Venceu!\n", nomedacidade1);
+        else
+        printf ("%s Venceu!\n", nomedacidade2);
+    }else {
+      if (escolha == 2) {
+          if (areaemkm1 > areaemkm2)
+          printf ("%s Venceu!\n", nomedacidade1);
+          else
+          printf ("%s Venceu!\n", nomedacidade2);
+      }else{
+         if (escolha == 3) {
+          if (pib1 > pib2)
+          printf ("%s Venceu!\n", nomedacidade1);
+          else
+          printf ("%s Venceu!\n", nomedacidade2);
+      }else {
+        if (escolha == 4) {
+          if (pontosturisticos1 > pontosturisticos2)
+          printf ("%s Venceu!\n", nomedacidade1);
+          else
+          printf ("%s Venceu!\n", nomedacidade2);
+        }else {
+          if (escolha == 5) {
+            if (densidadepopulacional1 > densidadepopulacional2)
+            printf ("%s Venceu!\n", nomedacidade1);
+            else
+            printf ("%s Venceu!\n", nomedacidade2);
+          }else {
+            if (escolha == 6) {
+              if (pibpercapta1 > pibpercapta2)
+              printf ("%s Venceu!\n", nomedacidade1);
+              else
+              printf ("%s Venceu!\n", nomedacidade2);
+            }else {
+              if (escolha == 7) {
+                if (superpoder1 > superpoder2)
+                printf ("%s Venceu!\n", nomedacidade1);
+                else
+                printf ("%s Venceu!\n", nomedacidade2);
+              }else {
+                printf ("Número inválido.\n");
+              }
+            }
+            }
+          }
+        }
+      }
+    }
+
+    
 
 return 0;
 } 
