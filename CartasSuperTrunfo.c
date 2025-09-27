@@ -8,9 +8,9 @@ int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
   // Variáveis da primeira carta
 
-    char estado1[15] = "batata";
+    char estado1[30] = "batata";
     char codigodacarta1[10] = "batata";
-    char nomedacidade1[15] = "batata";
+    char nomedacidade1[30] = "batata";
     int populacao1 = 300000;
     float areaemkm1 = 1.000000;
     float pib1 = 700.000000000;
@@ -23,9 +23,9 @@ int main() {
   
   // Variáveis da segunda carta
 
-    char estado2[15] = "batata";
+    char estado2[30] = "batata";
     char codigodacarta2[10] = "batata";
-    char nomedacidade2[15] = "batata";
+    char nomedacidade2[30] = "batata";
     int populacao2 = 300000;
     float areaemkm2 = 1.000000;
     float pib2 = 700.000000000;
