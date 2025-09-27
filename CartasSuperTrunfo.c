@@ -18,7 +18,8 @@ int main() {
     float densidadepopulacional1 = 0.0;
     float pibpercapta1 = 0.0;
     float superpoder1 = 0.0;
-    int escolha;
+
+    int escolha1, escolha2, resultado1, resultado2;
   
   // Variáveis da segunda carta
 
@@ -33,9 +34,14 @@ int main() {
     float pibpercapta2 = 0.0;
     float superpoder2 = 0.0;
 
+    printf ("Bem-vindo ao jogo Super Trunfo!\n");
+    printf ("================================\n");
+    printf ("Cadastre e compare suas cartas!\n");
+    printf ("**********************************\n");
+
   // Área para entrada de dados da primeira carta
   
-    printf ("Cadastre sua carta:\n");
+    printf ("Cadastre sua primeira carta:\n");
 
     printf ("\nDigite o nome do estado: ");
     scanf ("%s", estado1);
@@ -88,7 +94,7 @@ int main() {
 
     // Área para entrada de dados da segunda carta
   
-    printf ("\nCadastre sua carta:\n");
+    printf ("\nCadastre sua segunda carta:\n");
 
     printf ("\nDigite o nome do estado: ");
     scanf ("%s", estado2);
@@ -139,7 +145,7 @@ int main() {
     printf ("\nSuper Poder..........: %.2f", superpoder2);
     printf ("\n----------------------------------\n");
 
-    printf ("Escolha o atributo que você deseja comparar (de 1 a 7): \n");
+    printf ("Escolha o primeiro atributo que você deseja comparar (de 1 a 7): \n");
     printf ("1 = População\n");
     printf ("2 = Área em Km²\n");
     printf ("3 = PIB\n");
@@ -147,77 +153,83 @@ int main() {
     printf ("5 = Densidade Populacional\n");
     printf ("6 = PIB percapta\n");
     printf ("7 = Super Poder\n");
-    scanf ("%d", &escolha);
+    scanf ("%d", &escolha1);
 
-    //área para comparar as cartas usando switch de acordo com a escolha do Usuário na variável escolha
+    //área para comparar as cartas usando switch de acordo com a escolha do Usuário na variável escolha1
         
-      switch (escolha) {
+      switch (escolha1) {
       case 1:
-        if (populacao1 > populacao2) {
-          printf ("%s Venceu!\n", nomedacidade1);
-          }else if (populacao1 < populacao2) {
-          printf ("%s Venceu!\n", nomedacidade2);
-          }else {
-          printf ("Empate.\n");
-          }
-      break;
+        resultado1 == populacao1 > populacao2 ? 1 : 0;
+        break;
       case 2:
-       if (areaemkm1 > areaemkm2) {
-          printf ("%s Venceu!\n", nomedacidade1);
-          }else if (areaemkm1 < areaemkm2) {
-          printf ("%s Venceu!\n", nomedacidade2);
-          }else {
-          printf ("Empate.\n");
-          }
+      resultado1 == areaemkm1 > areaemkm2 ? 1 : 0;
       break;
       case 3:
-       if (pib1 > pib2) {
-          printf ("%s Venceu!\n", nomedacidade1);
-          }else if (pib1 < pib2) {
-          printf ("%s Venceu!\n", nomedacidade2);
-          }else {
-          printf ("Empate.\n");
-          }
+      resultado1 == pib1 > pib2 ? 1 : 0;
       break;
       case 4:
-       if (pontosturisticos1 > pontosturisticos2) {
-          printf ("%s Venceu!\n", nomedacidade1);
-          }else if (pontosturisticos1 < pontosturisticos2) {
-          printf ("%s Venceu!\n", nomedacidade2);
-          }else {
-          printf ("Empate.\n");
-          }
+      resultado1 == pontosturisticos1 > pontosturisticos2 ? 1 : 0;
       break;
       case 5:
-        if (densidadepopulacional1 < densidadepopulacional2) {
-          printf ("%s Venceu!\n", nomedacidade1);
-          }else if (densidadepopulacional1 > densidadepopulacional2) {
-          printf ("%s Venceu!\n", nomedacidade2);
-          }else {
-          printf ("Empate.\n");
-          }
+      resultado1 == densidadepopulacional1 < densidadepopulacional2 ? 1 : 0;
       break;
       case 6:
-        if (pibpercapta1 > pibpercapta2) {
-          printf ("%s Venceu!\n", nomedacidade1);
-          }else if (pibpercapta1 < pibpercapta2) {
-          printf ("%s Venceu!\n", nomedacidade2);
-          }else {
-          printf ("Empate.\n");
-          }
+      resultado1 == pibpercapta1 > pibpercapta2 ? 1 : 0;
       break;
       case 7:
-        if (superpoder1 > superpoder2) {
-          printf ("%s Venceu!\n", nomedacidade1);
-          }else if (superpoder1 < superpoder2) {
-          printf ("%s Venceu!\n", nomedacidade2);
-          }else {
-          printf ("Empate.\n");
-          }
+      resultado1 == superpoder1 > superpoder2 ? 1 : 0;
       break;
       default: 
         printf ("Escolha inválida.\n");
       break; 
+        }
+
+    printf ("Escolha o segundo atributo que você deseja comparar (de 1 a 7): \n");
+    printf ("1 = População\n");
+    printf ("2 = Área em Km²\n");
+    printf ("3 = PIB\n");
+    printf ("4 = Pontos Turísticos\n");
+    printf ("5 = Densidade Populacional\n");
+    printf ("6 = PIB percapta\n");
+    printf ("7 = Super Poder\n");
+    scanf ("%d", &escolha2);
+
+        if (escolha1 == escolha2) {
+          printf ("Opção igual à anterior\n");
+        }else {
+      switch (escolha2) {
+      case 1:
+        resultado2 == populacao1 > populacao2 ? 1 : 0;
+        break;
+      case 2:
+      resultado2 == areaemkm1 > areaemkm2 ? 1 : 0;
+      break;
+      case 3:
+      resultado2 == pib1 > pib2 ? 1 : 0;
+      break;
+      case 4:
+      resultado2 == pontosturisticos1 > pontosturisticos2 ? 1 : 0;
+      break;
+      case 5:
+      resultado2 == densidadepopulacional1 < densidadepopulacional2 ? 1 : 0;
+      break;
+      case 6:
+      resultado2 == pibpercapta1 > pibpercapta2 ? 1 : 0;
+      break;
+      case 7:
+      resultado2 == superpoder1 > superpoder2 ? 1 : 0;
+      break;
+      default: 
+        printf ("Escolha inválida.\n");
+      break;}
+        }
+
+        if (resultado1 && resultado2) {
+          printf ("%s Venceu!\n", nomedacidade1);
+        }else if (resultado1 != resultado2) {
+          printf ("Empate!\n");
+        }else {
+          printf ("%s Venceu!\n", nomedacidade2);
         }
     return 0;
 
