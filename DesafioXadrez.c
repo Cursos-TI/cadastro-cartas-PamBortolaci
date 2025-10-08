@@ -2,7 +2,6 @@
 
     void jogo (int jogar){
     int peca = 0;
-    int jogar = 1;
     if (jogar > 0){
         printf ("Qual peça você deseja mover?\n");
         printf ("1. Torre\n");
