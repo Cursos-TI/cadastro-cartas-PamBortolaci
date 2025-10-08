@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-    void jogo (int parajogar){
-    int peca = 0, parajogar = 1;
-    if (parajogar > 0){
+    void jogo (int jogar){
+    int peca = 0;
+    int jogar = 1;
+    if (jogar > 0){
         printf ("Qual peça você deseja mover?\n");
         printf ("1. Torre\n");
         printf ("2. Bispo\n");
@@ -15,9 +16,9 @@
         printf ("Deseja continuar jogando?\n");
         printf ("Digite 1 para continuar\n");
         printf ("Digite 0 para sair\n");
-        acanf ("%d", &parajogar);
+        scanf ("%d", &jogar);
 
-        jogo (parajogar);
+        jogo (jogar);
     }else{
         printf ("Saindo do jogo...\n");
     }
@@ -257,6 +258,7 @@
 int main (){
     int parajogar = 1;
 
+    printf ("Bem-vindo ao jogo de Xadrez\n");
     jogo (parajogar);
     return 0;
 }
