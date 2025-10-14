@@ -2,6 +2,8 @@
 
 int main() {
 
+    //Declaração de variáveis
+
     char linha [10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
     int tabuleiro [10][10];
@@ -11,11 +13,15 @@ int main() {
     printf ("|   ");
     printf ("|");
 
+    //Inicializando variável tabuleiro
+
     for (int coluna = 0; coluna < 10; coluna++) {
             for (int linha = 0; linha < 10; linha++){
                     tabuleiro [coluna][linha] = 0;
             }
     }
+
+    //Registrando valor do primeiro navio
 
     for (int coluna = 0; coluna < 10; coluna++) {
         if (coluna == 1 || coluna == 2 || coluna == 3) {
@@ -27,6 +33,8 @@ int main() {
         }
     }
 
+    //Registrando valor do segundo navio
+
      for (int coluna = 0; coluna < 10; coluna++) {
         if (coluna == 7) {
             for (int linha = 0; linha < 10; linha++) {
@@ -37,6 +45,8 @@ int main() {
         }
     }
     
+    //Montando o tabuleiro 
+
     for (int i = 0; i < 10; i++) {
         printf (" %c |", linha [i]);
     }
